@@ -26,6 +26,11 @@ const routes = [
     component: () => import('@/views/timeline')
   },
   {
+    path: '/link',
+    name: 'Link',
+    component: () => import('@/views/link')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('@/views/about')

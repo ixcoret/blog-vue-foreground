@@ -1,2 +1,2 @@
 # vueblog
-博客前台
+Vuejs + Element UI博客前台前端代码

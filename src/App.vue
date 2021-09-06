@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="header" v-show="isShow">
-      <navbar></navbar>
+      <nav-bar></nav-bar>
     </div>
 
     <div class="main">
@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
+import NavBar from './components/NavBar'
 export default {
   components: {
-    Navbar
+    NavBar
   },
   data() {
     return {

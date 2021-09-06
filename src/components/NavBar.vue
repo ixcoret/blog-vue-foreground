@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-wrapper">
+  <div class="nav-container">
     <el-row type="flex" align="middle" justify="space-between">
       <el-col :span="4" class="logo">
         <router-link to="/">
@@ -7,13 +7,14 @@
         </router-link>
       </el-col>
 
-      <el-col :span="9" class="main-menu">
+      <el-col :span="10" class="main-menu">
         <el-menu :default-active="this.$route.path" active-text-color="#409eff" mode="horizontal" :router="true">
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/category">分类</el-menu-item>
           <el-menu-item index="/tag">标签</el-menu-item>
           <el-menu-item index="/timeline">时光轴</el-menu-item>
-          <el-menu-item index="/about">关于我</el-menu-item>
+          <el-menu-item index="/link">友链</el-menu-item>
+          <el-menu-item index="/about">关于</el-menu-item>
           <el-submenu index="">
             <template slot="title">博客源码</template>
             <el-menu-item index=""><a href="https://github.com/ixcoret/vueblog" target="_blank">博客前台前端源码</a></el-menu-item>
@@ -44,7 +45,7 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: 'NavBar',
   data() {
     return {
     }
@@ -53,7 +54,7 @@ export default {
 </script>
 
 <style scoped>
-  .navbar-wrapper {
+  .nav-container {
     width: 90%;
     margin: 0 auto;
   }

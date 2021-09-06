@@ -1,6 +1,6 @@
 <template>
   <div>
-    关于本站
+    友情链接
   </div>
 </template>
 
