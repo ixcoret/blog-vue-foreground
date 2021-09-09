@@ -27,10 +27,12 @@
       <el-col :span="4">
         <div class="search">
           <el-input
-            class="search-input"
+            v-model="keywords"
+            class="input-search"
             size="small"
             placeholder="请输入搜索内容...此功能待开发"
-            prefix-icon="el-icon-search">
+            prefix-icon="el-icon-search"
+            @keydown.enter.native="search">
           </el-input>
         </div>
       </el-col>
@@ -48,6 +50,12 @@ export default {
   name: 'NavBar',
   data() {
     return {
+      keywords: ''
+    }
+  },
+  methods: {
+    search() {
+      this.$router.push({ path: '/search' })
     }
   }
 }
