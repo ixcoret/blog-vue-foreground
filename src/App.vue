@@ -1,11 +1,15 @@
 <template>
   <div id="app">
-    <div class="header" v-show="isShow">
-      <nav-bar></nav-bar>
-    </div>
+    <transition name="fade">
+      <div class="header" v-show="isShow">
+        <nav-bar class="nav-bar"></nav-bar>
+      </div>
+    </transition>
 
     <div class="main">
-      <router-view />
+      <div class="content">
+        <router-view />
+      </div>
     </div>
 
     <div class="footer">
@@ -42,18 +46,18 @@ export default {
     watchScroll (e) {
       e = e || window.event
       if (e.wheelDelta) {
-        if (e.wheelDelta > 0 && this.show === false) { // 当滑轮向上滚动
-          this.show = true
+        if (e.wheelDelta > 0 && this.isShow === false) { // 当滑轮向上滚动
+          this.isShow = true
         }
-        if (e.wheelDelta < 0 && this.show === true) { // 当滑轮向下滚动
-          this.show = false
+        if (e.wheelDelta < 0 && this.isShow === true) { // 当滑轮向下滚动
+          this.isShow = false
         }
       } else if (e.detail) {
-        if (e.detail < 0 && this.show === false) { // 当滑轮向上滚动
-          this.show = true
+        if (e.detail < 0 && this.isShow === false) { // 当滑轮向上滚动
+          this.isShow = true
         }
-        if (e.detail > 0 && this.show === true) { // 当滑轮向下滚动
-          this.show = false
+        if (e.detail > 0 && this.isShow === true) { // 当滑轮向下滚动
+          this.isShow = false
         }
       }
     }
@@ -62,9 +66,26 @@ export default {
 </script>
 
 <style>
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
+  .nav-bar {
+    width: 90%;
+    margin: 0 auto;
+  }
   .main {
-    height: 800px;
+    height: 3000px;
+    margin-top: 60px;
     background-color: #e6e6e6;
+  }
+  .content {
+    width: 96%;
+    margin: 0 auto;
+    padding: 20px 0;
   }
   .footer {
     background-color: #f5f5f5;
