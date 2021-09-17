@@ -2,7 +2,7 @@
   <el-row type="flex" align="middle" justify="space-between">
     <el-col :span="4" class="logo">
       <router-link to="/">
-        <span style="color: #006cff">原子博客</span>
+        <span style="color: #006cff">闲言博客</span>
       </router-link>
     </el-col>
 

@@ -21,7 +21,7 @@ export default {
   }
   .article-item {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   .article-item:first-child {
     margin-top: 0;

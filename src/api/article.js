@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-const baseUrl = '/admin/articles'
+const baseUrl = '/articles'
 
 export function listArticles(params) {
   return request({

@@ -1,24 +1,31 @@
 <template>
-  <el-row :gutter="20">
-    <el-col :span="19" class="home-main">
+  <div class="home">
+    <div class="home-main">
       <article-list/>
-    </el-col>
-    <el-col :span="5" class="home-side">
+    </div>
+    <div class="home-side">
       <side-card v-for="s in 4" :key="s"/>
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </template>
 <script>
-
 import ArticleList from '../article/ArticleList'
 import SideCard from '../../components/SideCard'
 export default {
   name: 'Home',
-  components: {
-    SideCard,
-    ArticleList
-  }
+  components: { SideCard, ArticleList }
 }
 </script>
 <style>
+.home {
+  display: flex;
+}
+
+.home-main {
+  flex: 3;
+  margin-right: 20px;
+}
+.home-side {
+  flex: 1;
+}
 </style>
