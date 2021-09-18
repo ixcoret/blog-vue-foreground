@@ -10,7 +10,7 @@ export function listArticles(params) {
   })
 }
 
-export function getById(id) {
+export function getArticleById(id) {
   return request({
     url: `${baseUrl}/${id}`,
     method: 'get'

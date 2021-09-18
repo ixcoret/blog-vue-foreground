@@ -35,9 +35,9 @@ export default {
     background-color: #e6e6e6;
   }
   .content-container {
-    width: 96%;
+    width: 98%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .footer {
     background-color: #f5f5f5;

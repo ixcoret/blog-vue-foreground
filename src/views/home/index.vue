@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <div class="home-main">
-      <article-list/>
-    </div>
     <div class="home-side">
       <side-card v-for="s in 4" :key="s"/>
+    </div>
+    <div class="home-main">
+      <article-list/>
     </div>
   </div>
 </template>
@@ -20,12 +20,12 @@ export default {
 .home {
   display: flex;
 }
-
-.home-main {
-  flex: 3;
-  margin-right: 20px;
-}
 .home-side {
-  flex: 1;
+  flex: 23%;
+  padding: 10px;
+}
+.home-main {
+  flex: 77%;
+  padding: 10px;
 }
 </style>
