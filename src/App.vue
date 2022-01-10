@@ -10,7 +10,7 @@
 
     <div class="footer">
       <div class="copyright">
-        <span>Designed by ixcoret. All rights reserved.</span>
+        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2021027345号</a>
       </div>
     </div>
   </div>
@@ -27,11 +27,11 @@ export default {
 
 <style>
   .nav-bar {
-    width: 90%;
+    width: 98%;
     margin: 0 auto;
   }
   .main {
-    height: 3000px;
+    height: 1000px;
     background-color: #e6e6e6;
   }
   .content-container {
@@ -48,6 +48,6 @@ export default {
     line-height: 60px;
     margin: 0 auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
 </style>
